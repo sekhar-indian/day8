@@ -1,29 +1,16 @@
-let form=document.getElementById("addForm");
-let ul=document.getElementById("items");
-form.addEventListener('submit',addItem);
-
-function addItem(e){
-    e.preventDefault();
-    
-    //get input value
-    let newitm=document.getElementById('item').value;
-
-    //create li eliment 
-    let li=document.createElement('li');
-    //add class name
-    li.className='list-group-item';
-    //add text node 
-    li.appendChild(document.createTextNode(newitm));
-     
-    let deleteBtn=document.createElement('button');
-    deleteBtn.className='btnn btn-danger btn-smflaoat-right delete';
-    deletBtn.appendChild(document.createTextNode('x'));
-    
-
-   
-
-}
-
-
-
-
+// // day1.1
+// alert("well come to user my name is sekhar");
+// alert(hi )
+// console.log(document.all);
+// console.dir(document);
+// console.log(document.url);
+// console.log(document.body);
+// console.log(document.h1);
+//console.log(document.getElementById("main"));
+//console.log(ss);
+// var s=document.getElementById("header-title");
+// s.textContent="welcome back to sekhar";
+// s.innerText("sekhar go back");
+// s.innerText="sekhar go back";
+// s.style.color="red";
+// s.style.fontSize="10px";
