@@ -14,3 +14,12 @@
 // s.innerText="sekhar go back";
 // s.style.color="red";
 // s.style.fontSize="10px";
+var item=document.getElementsByClassName("list-group-item");
+console.log(item);
+item[1].textContent="change1";
+for(var i=0;i<item.length;i++)
+{
+    item[i].style.color="red";
+    item[i].style.backgroundColor="yellow";
+    item[i].style.fontWeight="bold"
+}
