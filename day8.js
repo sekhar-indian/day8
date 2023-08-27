@@ -25,7 +25,22 @@
 // }
 
 //qury selector
-var items=document.querySelector("#header-title");
-items.style.color="yellow";
-items.style.borderBottom="solid 4px red";
+// var items=document.querySelector("#header-title");
+// items.style.color="yellow";
+// items.style.borderBottom="solid 4px red";
 
+// var input=document.querySelector("input");
+// input.value="sekhar";
+
+// // var submit=document.querySelector('input[type="submit"]');
+// // submit.value="send";
+
+// var sub=document.querySelector('input[type="submit"]');
+// sub.value="ok";
+
+var a=document.querySelectorAll(".list-group-item:nth-child(even)");
+for(var i=0;i<a.length;i++)
+{
+    a[i].style.backgroundColor="red";
+
+}
