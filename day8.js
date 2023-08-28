@@ -38,9 +38,55 @@
 // var sub=document.querySelector('input[type="submit"]');
 // sub.value="ok";
 
-var a=document.querySelectorAll(".list-group-item:nth-child(even)");
-for(var i=0;i<a.length;i++)
-{
-    a[i].style.backgroundColor="red";
+// var a=document.querySelectorAll(".list-group-item:nth-child(even)");
+// for(var i=0;i<a.length;i++)
+// {
+//     a[i].style.backgroundColor="red";
 
-}
+// }
+
+//parent node 
+var item=document.querySelector("#items");
+// console.log(item.parentNode);
+
+//parent element
+// console.log(item.parentElement);
+
+//chiled node
+// console.log(item.childNodes);
+
+//chiled
+// console.log(item.lastElementChild);
+// console.log(item.firstElementChild);
+
+// next sliblings
+// console.log(item.nextSibling);
+
+//previous sibling
+// console.log(item.previousSibling);
+
+//next elimentSibling
+// console.log(item.nextElementSibling);
+
+//previous eliment Sibling
+// console.log(item.previousElementSibling);
+// item.previousElementSibling.style.color="red";
+
+//create div
+var div=document.createElement('div');
+
+div.className="class1";
+
+div.id="id1";
+
+div.setAttribute("type",'sekhar');
+
+var diva=document.createTextNode("hi my name munisekhar udavalapti");
+
+div.appendChild(diva);
+
+var container =document.querySelector("header .container");
+var h1=document.querySelector("header h1");
+
+container.insertBefore(div,h1);
+
