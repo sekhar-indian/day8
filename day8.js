@@ -71,7 +71,7 @@ var item=document.querySelector("#items");
 //previous eliment Sibling
 // console.log(item.previousElementSibling);
 // item.previousElementSibling.style.color="red";
-
+//
 //create div
 var div=document.createElement('div');
 
