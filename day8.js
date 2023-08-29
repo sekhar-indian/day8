@@ -141,7 +141,9 @@
 
 var a1=document.getElementById("addForm");
 var a2=document.getElementById("items");
-
+var filter=document.getElementById("filter")
+//feltaring Element
+filter.addEventListener('keyup', fitem);
 a2.addEventListener("click",remove);
 
 a1.addEventListener("submit",addItem);
@@ -167,6 +169,8 @@ function addItem(e)
 }
 
 
+
+
 function remove(e)
 {
     if(e.target.classList.contains("delete"))
@@ -182,11 +186,21 @@ function remove(e)
 
 
 
-
-
-
-
-
+  function fitem(e){
+    // convert text to lowercase
+    var text = e.target.value.toLowerCase();
+    // Get lis
+    var items = a4.getElementsByTagName('li');
+    // Convert to an array
+    Array.from(items).forEach(function(item){
+      var itemName = item.firstChild.textContent;
+      if(itemName.toLowerCase().indexOf(text) != -1){
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  }
 
 
 
