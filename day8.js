@@ -139,79 +139,77 @@
 
 
 
-var a1=document.getElementById("addForm");
-var a2=document.getElementById("items");
-var filter=document.getElementById("filter")
-//feltaring Element
-filter.addEventListener('keyup', fitem);
-a2.addEventListener("click",remove);
+// var a1=document.getElementById("addForm");
+// var a2=document.getElementById("items");
+// var filter=document.getElementById("filter")
+// //feltaring Element
+// filter.addEventListener('keyup', fitem);
+// a2.addEventListener("click",remove);
 
-a1.addEventListener("submit",addItem);
-function addItem(e)
-{
-    e.preventDefault();
-    var a3=document.getElementById("item");
+// a1.addEventListener("submit",addItem);
+// function addItem(e)
+// {
+//     e.preventDefault();
+//     var a3=document.getElementById("item");
     
-    var a4=document.createElement("li");
-    a4.className="list-group-item";
+//     var a4=document.createElement("li");
+//     a4.className="list-group-item";
     
-     a4.appendChild(document.createTextNode(a3.value));
+//      a4.appendChild(document.createTextNode(a3.value));
 
-    alert("godd");
-    console.log(a4)
+//     alert("godd");
+//     console.log(a4)
 
-    var det=document.createElement("button");
-    det.className="btn btn-danger btn-sm float-right delete";
-    det.appendChild(document.createTextNode("delete"));
-    a4.appendChild(det);
-    a2.appendChild(a4);
+//     var det=document.createElement("button");
+//     det.className="btn btn-danger btn-sm float-right delete";
+//     det.appendChild(document.createTextNode("delete"));
+//     a4.appendChild(det);
+//     a2.appendChild(a4);
 
-}
-
-
-
-
-function remove(e)
-{
-    if(e.target.classList.contains("delete"))
-    {
-       if(confirm("do you want to delete the item?"))
-       {
-            var idt=e.target.parentElement;
-            a2.removeChild(idt);
-       }
-    }
-}
+// }
 
 
 
 
-  function fitem(e){
-    // convert text to lowercase
-    var text = e.target.value.toLowerCase();
-    // Get lis
-    var items = a4.getElementsByTagName('li');
-    // Convert to an array
-    Array.from(items).forEach(function(item){
-      var itemName = item.firstChild.textContent;
-      if(itemName.toLowerCase().indexOf(text) != -1){
-        item.style.display = 'block';
-      } else {
-        item.style.display = 'none';
-      }
-    });
-  }
+// function remove(e)
+// {
+//     if(e.target.classList.contains("delete"))
+//     {
+//        if(confirm("do you want to delete the item?"))
+//        {
+//             var idt=e.target.parentElement;
+//             a2.removeChild(idt);
+//        }
+//     }
+// }
 
 
 
 
+//   function fitem(e){
+//     // convert text to lowercase
+//     var text = e.target.value.toLowerCase();
+//     // Get lis
+//     var items = a4.getElementsByTagName('li');
+//     // Convert to an array
+//     Array.from(items).forEach(function(item){
+//       var itemName = item.firstChild.textContent;
+//       if(itemName.toLowerCase().indexOf(text) != -1){
+//         item.style.display = 'block';
+//       } else {
+//         item.style.display = 'none';
+//       }
+//     });
+//   }
 
+localStorage.setItem("id","sekhar-indian");
+console.log(localStorage.getItem("id"));
+localStorage.removeItem("id");
 
+sessionStorage.setItem("id","sname");
+console.log(sessionStorage.getItem("id"));
+sessionStorage.removeItem("id");
 
-
-
-
-
-
-
+sessionStorage.setItem("id","ram");
+sessionStorage.setItem("id","sekhar");
 
