@@ -202,14 +202,30 @@
 //     });
 //   }
 
-localStorage.setItem("id","sekhar-indian");
-console.log(localStorage.getItem("id"));
-localStorage.removeItem("id");
+// localStorage.setItem("id","sekhar-indian");
+// console.log(localStorage.getItem("id"));
+// localStorage.removeItem("id");
 
-sessionStorage.setItem("id","sname");
-console.log(sessionStorage.getItem("id"));
-sessionStorage.removeItem("id");
+// sessionStorage.setItem("id","sname");
+// console.log(sessionStorage.getItem("id"));
+// sessionStorage.removeItem("id");
 
-sessionStorage.setItem("id","ram");
-sessionStorage.setItem("id","sekhar");
+// sessionStorage.setItem("id","ram");
+// sessionStorage.setItem("id","sekhar");
+
+
+
+let myobj={
+   name:"sekhar",
+   age:19
+};
+
+let myobjs=JSON.stringify(myobj);
+console.log(myobjs);
+
+localStorage.setItem("myobj",myobjs);
+console.log(localStorage);  
+// console.log(localStorage.getItem("myobj"));
+let myobjd=JSON.parse(localStorage.getItem("myobj"));
+console.log(myobjd);
 
